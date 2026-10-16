@@ -250,6 +250,15 @@ export class VideoCompositionRenderer {
     return { dx, dy, targetDeviceW, targetDeviceH, screenX, screenY, screenW, screenH, screenRadius };
   }
 
+  public evaluateAnimationAtTime(project: Project, time: number): EvaluatedAnimationState {
+    return evaluateAnimationState(
+      project.keyframes,
+      project.transform,
+      project.device,
+      time
+    );
+  }
+
   /**
    * Converts mouse canvas pixel coordinates (0..canvas.width, 0..canvas.height)
    * to inner video screen percentage (0..100%, 0..100%).
@@ -408,8 +417,6 @@ export class VideoCompositionRenderer {
       time,
       project.annotations,
       videoElement,
-      activeSample
-    );
       activeSample
     );
 

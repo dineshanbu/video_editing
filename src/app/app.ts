@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopToolbarComponent } from './components/top-toolbar';
 import { LeftSidebarComponent } from './components/left-sidebar';
