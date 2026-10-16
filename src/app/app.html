@@ -1,0 +1,17 @@
+<div class="h-screen w-screen flex flex-col bg-[#0b0f19] text-slate-100 overflow-hidden font-sans">
+  <!-- Top Toolbar -->
+  <app-top-toolbar></app-top-toolbar>
+
+  <!-- Center Workspace (Left Sidebar + Center Canvas + Right Inspector) -->
+  <div class="flex-1 flex overflow-hidden min-h-0">
+    <app-left-sidebar></app-left-sidebar>
+    <app-preview-canvas></app-preview-canvas>
+    <app-properties-inspector></app-properties-inspector>
+  </div>
+
+  <!-- Bottom Multitrack Timeline -->
+  <app-timeline></app-timeline>
+
+  <!-- Export Dialog Modal -->
+  <app-export-dialog></app-export-dialog>
+</div>

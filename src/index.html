@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // Fix for extensions/sandboxes attempting to overwrite window.fetch when Window prototype defines a getter only
+      try {
+        let _activeFetch = window.fetch ? window.fetch.bind(window) : null;
+        Object.defineProperty(window, 'fetch', {
+          get() {
+            return _activeFetch;
+          },
+          set(val) {
+            _activeFetch = val;
+          },
+          configurable: true,
+          enumerable: true,
+        });
+      } catch (e) {
+        // Safe ignore
+      }
+    </script>
+    <title>StudioMotion - Professional Screen Video Editor</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Desktop-class video editor with realistic 3D device mockups, browser windows, keyframe zoom & pan animation, screen annotations, gradient backgrounds, and multitrack export." />
+    <meta property="og:title" content="StudioMotion - Professional Screen Video Editor" />
+    <meta property="og:description" content="Desktop-class video editor with realistic 3D device mockups, browser windows, keyframe zoom & pan animation, screen annotations, gradient backgrounds, and multitrack export." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0b0f19] text-slate-100 antialiased overflow-hidden select-none">
+    <app-root></app-root>
+  </body>
+</html>

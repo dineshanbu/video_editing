@@ -1,0 +1,6 @@
+{
+  "name": "StudioMotion - Professional Screen Video Editor",
+  "description": "Desktop-class video editor with realistic 3D device mockups, browser windows, keyframe zoom & pan animation, screen annotations, gradient backgrounds, and multitrack export.",
+  "requestFramePermissions": ["display-capture"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
